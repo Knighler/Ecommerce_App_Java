@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox prefHeight="477.0" prefWidth="1166.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CustomerProductsSceneController">
+   <children>
+      <VBox maxWidth="300" prefHeight="547.0" prefWidth="83.0" style="-fx-background-color: #643403;" HBox.hgrow="NEVER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="143.0" prefWidth="150.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <ImageView fx:id="profilePic" fitHeight="150.0" fitWidth="156.0" onMouseClicked="#switchToProfile" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                     <image>
+                        <Image url="@avatar-3814049_1280.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets top="-5.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets right="-2.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="0.0" prefWidth="150.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Button fx:id="homeButton" mnemonicParsing="false" onAction="#switchToHome" prefHeight="57.0" prefWidth="123.0" style="-fx-background-color: #c6a108;" text="Home" textFill="WHITE" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" VBox.vgrow="ALWAYS">
+               <children>
+                  <Button fx:id="ProductsButton" mnemonicParsing="false" onAction="#switchToProducts" style="-fx-background-color: #c6a108;" text="Products" textFill="WHITE" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="0.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#switchToCart" prefHeight="57.0" prefWidth="129.0" style="-fx-background-color: #c6a108;" text="cart" textFill="WHITE" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <HBox.margin>
+            <Insets top="-70.0" />
+         </HBox.margin>
+      </VBox>
+      <BorderPane  stylesheets="@style.css" HBox.hgrow="ALWAYS">
+         <top>
+            <VBox prefHeight= BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER_LEFT"   style="-fx-background-color: #c6a108; -fx-border-color: #ffffff; -fx-border-width: 4;" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Button fx:id="homeButton1" mnemonicParsing="false" onAction="#switchToLogIn" prefHeight="14.0" prefWidth="136.0" style="-fx-background-color: #c6a108;" text="LogOut" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="searchField" onAction="#handleTextFieldAction"  prefHeight="35.0" prefWidth="0.0" promptText="Search For An Item" style="-fx-background-color: #c6a108; -fx-border-color: #ffffff; -fx-border-radius: 90 0 0 90; -fx-border-width: 5;" HBox.hgrow="ALWAYS">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets></TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="200.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </top>
+         <center>
+            <VBox alignment="TOP_CENTER" prefHeight="15.0" prefWidth="1135.0" BorderPane.alignment="CENTER_LEFT">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="118.0" prefWidth="1135.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label prefHeight="54.0" prefWidth="282.0" text="Products" textFill="#643403" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font size="43.0" />
+                           </font>
+                           <padding>
+                              <Insets left="80.0" />
+                           </padding>
+                        </Label>
+                        <HBox alignment="CENTER_LEFT" spacing="30.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <MenuButton mnemonicParsing="false" style="-fx-background-color: #c6a108;" text="Categories">
+                                <items>
+                                  <MenuItem mnemonicParsing="false" text="Action 1" />
+                                  <MenuItem mnemonicParsing="false" text="Price" />
+                                </items>
+                              </MenuButton>
+                              <MenuButton mnemonicParsing="false" prefHeight="26.0" prefWidth="88.0" style="-fx-background-color: #c6a108;" text="Price">
+                                <items>
+                                  <MenuItem mnemonicParsing="false" text="Action 1" />
+                                  <MenuItem mnemonicParsing="false" text="Action 2" />
+                                </items>
+                              </MenuButton>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="150.0" />
+                           </HBox.margin>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <ScrollPane fitToWidth="true" hbarPolicy="NEVER" minViewportHeight="400.0" pannable="true" prefHeight="424.0" prefViewportWidth="300.0" prefWidth="1135.0" vmax="0.0" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <content>
+                        <FlowPane fx:id="flowPane" prefHeight="402.0" prefWidth="1138.0" />
+                     </content>
+                  </ScrollPane>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <BorderPane.margin>
+                  <Insets top="-200.0" />
+               </BorderPane.margin>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</HBox>

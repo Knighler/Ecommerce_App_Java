@@ -1,0 +1,16 @@
+
+
+.menu-button > .label {
+    /* TODO workaround for RT-19062 */
+    -fx-text-fill: white;
+
+}
+.button:hover {
+    -fx-background-color:  #643403 !important;
+}
+
+.AddItemsSceneLabels {
+    -fx-text-fill:  #643403 !important;
+    -fx-font-size: 30px !important;
+    -fx-font-weight: bold !important;
+}
